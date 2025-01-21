@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"">
+        <link rel=" stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <script src="https://kit.fontawesome.com/2d3aafa066.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <button class="openBurger" id="openBurger"><i class="fa-solid fa-bars"></i></button>
+        <nav class="menu" id="menu">
+            <button class="closeBurger" id="closeBurger"><i class="fa-solid fa-xmark"></i></button>
+            <ul class="mainMenu">
+                <li class="headerLink"><a href="https://www.instagram.com/_sr.lsrx_/" target="_blank">Instagram</a></li>
+                <img class="logo" src="./media/logo.svg" alt="logo">
+                <li class="headerLink"><a href="https://www.facebook.com/nicofernandezrozas"
+                        target="_blank">Facebook</a></li>
+            </ul>
+        </nav>
+        <script src="/CardsProyect/burgerMenu.js"></script> <!-- Vincular el archivo JavaScript del Burger Menu-->
+    </header>
+    <main>
+        <section class="content">
+            <section class="cardsGrid">
+                <article class="card" id="card1">
+                    <img src="/CardsProyect/media/nico.png" alt="img1"> 
+                    <h2>Nico Fernández</h2> 
+                    <ul>
+                        <li><i class="fa-solid fa-bowl-food"></i><strong> Comida:</strong> Pasta carbonara</li>
+                        <li><i class="fa-solid fa-city"></i><strong> Ciudad:</strong> Edimburgo</li>
+                        <li><i class="fa-solid fa-otter"></i><strong> Animal:</strong> Nutria</li>
+                        <li><i class="fa-solid fa-film"></i><strong> Película:</strong> Interestellar</li>
+                        <li class="musicHover" id="musicHover1"><i class="fa-solid fa-guitar"></i><strong>
+                                Canción:</strong> We are alive -
+                            Brenan Heart</li>
+                    </ul>
+                </article>
+                <article class="card" id="card2">
+                    <img src="/CardsProyect/media/maria.png" alt="img2">
+                    <h2>María Pérez</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-bowl-food"></i><strong> Comida:</strong> Pabellón</li>
+                        <li><i class="fa-solid fa-city"></i><strong> Ciudad:</strong> Tokio</li>
+                        <li><i class="fa-solid fa-otter"></i><strong> Animal:</strong> Gato</li>
+                        <li><i class="fa-solid fa-film"></i><strong> Película:</strong> Castaway on the moon</li>
+                        <li class="musicHover" id="musicHover2"><i class="fa-solid fa-guitar"></i><strong>
+                                Canción:</strong> Mirrors - Justin
+                            Timberlake</li>
+                    </ul>
+                </article>
+                <article class="card" id="card3">
+                    <img src="/CardsProyect/media/hema.png" alt="img3">
+                    <h2>Hema Priya S.</h2>
+                    <ul>
+                        <li><i class="fa-solid fa-bowl-food"></i><strong> Comida:</strong> Biriyani</li>
+                        <li><i class="fa-solid fa-city"></i><strong> Ciudad:</strong> Oviedo</li>
+                        <li><i class="fa-solid fa-otter"></i><strong> Animal:</strong> Gato</li>
+                        <li><i class="fa-solid fa-film"></i><strong> Película:</strong> The Grudge</li>
+                        <li class="musicHover" id="musicHover3"><i class="fa-solid fa-guitar"></i><strong>
+                                Canción:</strong> 3D - Jungkook</li>
+                    </ul>
+                </article>
+
+                <!-- Archivos de audio -->
+                <audio id="song1" src="/CardsProyect/media/song1.mp3" preload="auto"></audio>
+                <audio id="song2" src="/CardsProyect/media/song2.mp3" preload="auto"></audio>
+                <audio id="song3" src="/CardsProyect/media/song3.mp3" preload="auto"></audio>
+
+                <!-- Vincular el archivo JavaScript del musicHover -->
+                <script src="/CardsProyect/musicHover.js"></script>
+            </section>
+
+
+        </section>
+    </main>
+    <footer>
+        <p>Y con esto y un bizcocho...</p>
+    </footer>
+</body>
+
+</html>

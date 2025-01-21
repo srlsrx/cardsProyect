@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 1px;
+}
+
+strong {
+    font-weight: bold;
+    color: #FFB703;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #023047;
+    padding: 10px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #023047;
+    padding: 10px;
+    height: 100px;
+}
+
+footer p {
+    color: #FFB703;
+    font-family: Pacifico, Poppins, sans-serif;
+    font-size: 35px;
+    animation: shake 3s infinite;
+    /* Animación de temblor */
+    animation-delay: 10s;
+}
+
+.musicHover {
+    cursor: pointer;
+}
+
+.mainMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.headerLink a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFB703;
+}
+
+.headerLink a:hover {
+    color: white;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.headerLink {
+    margin: 0px 20px;
+}
+
+.logo {
+    width: 240px;
+    height: 120px;
+    margin: 0px 150px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFB703;
+}
+
+.cardsGrid {
+    width: 95%;
+    display: grid;
+    padding: 60px 20px;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "card1 card2 card3";
+    gap: 20px;
+
+}
+
+.card {
+    width: 400px;
+    background-color: #023047;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s forwards;
+}
+
+.card h2 {
+    margin: 0px;
+    color: #FFB703;
+    font-size: 40px;
+    justify-self: center;
+    font-family: Montserrat, Poppins, sans-serif;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card li {
+    margin: 10px 0px;
+    color: white;
+    font-size: 18px;
+}
+
+.card i {
+    color: #FFB703;
+    margin-right: 5px;
+    width: 20px;
+}
+
+.card ul li strong {
+    color: #FFB703;
+}
+
+#card1 {
+    grid-area: card1;
+    animation: slideInLeft 2s forwards;
+}
+
+#card2 {
+    grid-area: card2;
+    animation: fadeIn 2s forwards;
+}
+
+#card3 {
+    grid-area: card3;
+    animation: slideInRight 2s forwards;
+}
+
+
+
+.openBurger,
+.closeBurger {
+    display: none; /* Ocultar el botón de menú hamburguesa */
+}
+
+@keyframes shake {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    5% {
+        transform: rotate(2deg);
+    }
+
+    10% {
+        transform: rotate(-2deg);
+    }
+
+    15% {
+        transform: rotate(2deg);
+    }
+
+    20% {
+        transform: rotate(-2deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+    .cardsGrid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "card1" "card2" "card3";
+    }
+
+    .logo {
+        margin: 0px 80px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+
+    .cardsGrid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "card1" "card2" "card3";
+    }
+
+    .openBurger,
+    .closeBurger {
+        display: inline-block;
+        border: none;
+        background-color: transparent;
+        font-size: 30px;
+        color: #FFB703;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    header {
+        justify-content: end;
+        height: auto;
+    }
+
+    .menu {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        align-items: end;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(2, 48, 71, 0.99);
+        opacity: 0.8;
+        padding: 10px 10px 0 80px;
+        z-index: 1000;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+        transition: ease-in-out 0.1s;
+    }
+
+    .menu.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mainMenu {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .headerLink {
+        margin: 10px 0px;
+    }
+
+    .card {
+        width: 300px;
+    }
+
+    .card li {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 28px;
+    }
+}
